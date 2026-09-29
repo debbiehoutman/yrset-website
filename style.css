@@ -28,9 +28,9 @@ img { display: block; max-width: 100%; }
 .skip-link:focus { top: 16px; }
 
 .site-header { position: sticky; top: 0; z-index: 20; background: rgba(247, 251, 250, 0.94); border-bottom: 1px solid rgba(207, 228, 226, 0.85); backdrop-filter: blur(14px); }
-.nav-wrap { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
-.brand { display: inline-flex; align-items: center; width: 118px; text-decoration: none; }
-.brand img { width: 100%; height: 58px; object-fit: contain; }
+.nav-wrap { min-height: 126px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.brand { display: inline-flex; align-items: center; width: 132px; min-width: 132px; padding: 7px 0; text-decoration: none; }
+.brand img { width: 100%; height: 112px; object-fit: contain; }
 nav { display: flex; align-items: center; gap: 24px; font-size: 0.94rem; font-weight: 700; }
 nav a { text-decoration: none; text-underline-offset: 6px; }
 nav a:hover, nav a:focus-visible, nav a[aria-current="page"] { color: var(--teal-dark); text-decoration: underline; }
@@ -41,6 +41,8 @@ nav a:hover, nav a:focus-visible, nav a[aria-current="page"] { color: var(--teal
 .eyebrow { margin: 0 0 14px; color: var(--teal-dark); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; }
 h1, h2, h3 { margin-top: 0; line-height: 1.12; letter-spacing: -0.03em; overflow-wrap: break-word; hyphens: auto; }
 h1 { margin-bottom: 24px; font-size: clamp(3rem, 8vw, 6.8rem); }
+.hero h1 { margin-bottom: 4px; font-size: clamp(5rem, 12vw, 9rem); letter-spacing: -0.055em; }
+.hero-slogan { margin: 0 0 26px; color: var(--teal-dark); font-size: clamp(1.2rem, 2.2vw, 1.7rem); font-weight: 800; letter-spacing: 0.08em; }
 h2 { margin-bottom: 20px; font-size: clamp(2rem, 4vw, 3.4rem); }
 h3 { margin-bottom: 12px; font-size: 1.35rem; }
 .lead { max-width: 700px; margin: 0 0 34px; color: var(--ink-soft); font-size: clamp(1.18rem, 2vw, 1.5rem); }
@@ -74,7 +76,8 @@ h3 { margin-bottom: 12px; font-size: 1.35rem; }
 .legal-layout { display: grid; grid-template-columns: minmax(330px, 0.65fr) minmax(0, 1fr); gap: clamp(36px, 5vw, 60px); align-items: start; }
 .legal-layout > * { min-width: 0; }
 .legal-aside { position: sticky; top: 122px; }
-.legal-aside h1 { max-width: 100%; font-size: clamp(2.35rem, 3.5vw, 3.4rem); overflow-wrap: anywhere; }
+.legal-aside h1 { max-width: 100%; font-size: clamp(2.25rem, 3.2vw, 3.1rem); line-height: 1.04; overflow-wrap: anywhere; }
+.legal-title--long span { display: block; }
 .muted { color: var(--ink-soft); }
 .legal-copy { min-width: 0; padding: clamp(28px, 5vw, 54px); background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 14px 42px rgba(16, 47, 53, 0.07); }
 .legal-copy section + section { margin-top: 42px; padding-top: 38px; border-top: 1px solid var(--line); }
@@ -91,12 +94,14 @@ footer { padding: 34px 0; color: var(--ink-soft); background: var(--surface); bo
 
 @media (max-width: 760px) {
   .shell { width: min(1120px, calc(100% - 28px)); }
-  .nav-wrap { min-height: 74px; gap: 14px; }
-  .brand { width: 88px; }
-  .brand img { height: 48px; }
+  .nav-wrap { min-height: 104px; gap: 14px; }
+  .brand { width: 106px; min-width: 106px; padding: 5px 0; }
+  .brand img { height: 90px; }
   nav { gap: 12px; font-size: 0.82rem; }
   .hero-grid, .feature-grid, .policy-grid, .company-info-card, .legal-layout { grid-template-columns: 1fr; }
   .hero { padding-top: 58px; }
+  .hero h1 { font-size: clamp(4.25rem, 20vw, 6rem); }
+  .hero-slogan { margin-bottom: 22px; font-size: 1.1rem; }
   .hero-card { padding: 28px; }
   .legal-aside { position: static; }
   .legal-aside h1 { font-size: clamp(2.15rem, 11vw, 3rem); }
